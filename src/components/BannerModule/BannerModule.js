@@ -3,8 +3,27 @@ import { Link, navigate } from "gatsby"
 import { BannerModuleStyles } from "./BannerModuleStyles"
 import { StaticImage } from "gatsby-plugin-image"
 import Button from "../Button/Button"
+import useCarouselHome from "../../hooks/use-carousel-home"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const BannerModule = ({ children, title, subTitle, price, enquire }) => {
+
+  const carousel = useCarouselHome()
+  const image = getImage(carousel[0])
+  console.log(carousel)
+  /* {carousel.map((file, index) => {
+    console.log("file",file,index)
+    //return <FeaturedProduct feature={node} key={index} />
+  })} */
+{/* <StaticImage
+            className="banner__image"
+            imgClassName="banner__image--content"
+            src={"../../../static/macbook-color.jpg"}
+            alt="Banner Image"
+            layout="fullWidth"
+            placeholder="blurred"
+          /> */}
+
   function scrollToArea() {
     navigate("#topContent")
   }
@@ -15,14 +34,14 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
         {children ? (
           children
         ) : (
-          <StaticImage
-            className="banner__image"
-            imgClassName="banner__image--content"
-            src="../../../static/macbook-color.jpg"
-            alt="Banner Image"
-            layout="fullWidth"
-            placeholder="blurred"
-          />
+            
+            < GatsbyImage
+                className="banner__image"
+                imgClassName="banner__image--content"
+                image={image}
+                objectFit="cover"
+                alt={"testo alt"}
+              />
         )}
 
         <div className="container">

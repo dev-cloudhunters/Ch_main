@@ -7,7 +7,7 @@ export const FaqStyles = styled.section`
     width: 100%;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.15);
-    color: #fff;
+    color: #333;
     display: flex;
     align-items: center;
     justify-content: space-between;

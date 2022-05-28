@@ -94,7 +94,7 @@ export const FeaturedProductStyles = styled.aside`
     }
 
     h4 {
-      color: #fff;
+      color: #333;
     }
 
     p {

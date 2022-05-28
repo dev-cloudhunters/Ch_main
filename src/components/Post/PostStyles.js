@@ -23,7 +23,7 @@ export const PostItemStyles = styled(Link)`
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: #333;
   text-decoration: none;
   transition: border-color 0.6s ease, background-color 0.6s ease,
     box-shadow 0.6s ease;
@@ -63,7 +63,7 @@ export const PostItemStyles = styled(Link)`
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
   }
 
   .blogitem__meta {
@@ -91,7 +91,7 @@ export const PostItemStyles = styled(Link)`
   }
 
   &:hover {
-    color: #fff;
+    color: #333;
     border-color: var(--primary);
     background-color: #151515;
     box-shadow: var(--boxShadow);

@@ -44,7 +44,7 @@ export const FooterMenuStyles = styled.div`
     border-bottom: 2px solid #333;
 
     a {
-      color: #fff;
+      color: #333;
       text-decoration: none;
     }
   }
@@ -106,7 +106,7 @@ export const FooterMenuStyles = styled.div`
         &:hover,
         &:focus {
           a {
-            color: #fff;
+            color: #333;
           }
         }
       }
@@ -122,7 +122,7 @@ export const CopyrightStyles = styled.div`
     margin: 0;
 
     a {
-      color: #fff;
+      color: #333;
       font-weight: 700;
       text-decoration: none;
 

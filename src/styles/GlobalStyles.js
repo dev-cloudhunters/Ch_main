@@ -7,9 +7,9 @@ export const GlobalStyle = createGlobalStyle`
   --borderSpacing: 30px;
   --menuWidth: 100vw;
   --blockquote: 20px;
-  --background: #1b1b1b;
+  --background: #fff;
   --primary: #ffc400;
-  --bodyColor: #afc2cb;
+  --bodyColor: #333;
   --inActive: #555;
   --letterSpacing: -0.075rem;
   --boxShadow: 0px 15px 22px 3px rgba(0, 0, 0, 0.55);
@@ -82,7 +82,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--background);
-    color: #fff;
+    color: #333;
     overflow-x: hidden;
     font-size: var(--p);
 }
