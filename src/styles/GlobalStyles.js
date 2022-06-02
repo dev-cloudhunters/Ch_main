@@ -8,12 +8,13 @@ export const GlobalStyle = createGlobalStyle`
   --menuWidth: 100vw;
   --blockquote: 20px;
   --background: #fff;
-  --primary: #ffc400;
+  --primary: #c30f1a;
   --bodyColor: #333;
   --inActive: #555;
   --letterSpacing: -0.075rem;
   --boxShadow: 0px 15px 22px 3px rgba(0, 0, 0, 0.55);
   --textShadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  --textShadowWhite: 0px 0px 2px rgba(255, 255, 255, 0.5);
   --p: 14px;
   --h2: 20px;
   --h3: 19px;
@@ -43,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media(min-width:768px) {
-    --bannerTitle: 46px;    
+    --bannerTitle: 54px;    
     --blockquote: 26px;
     --p: 15px;
     --h2: 30px;

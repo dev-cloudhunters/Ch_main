@@ -7,7 +7,7 @@ const useCarouselHome = () => {
     query carouselHome {
         contentfulCarouselHome {
             imageGallery {
-                gatsbyImageData
+                gatsbyImageData(cropFocus: BOTTOM_LEFT)
             }
           }
     }

@@ -40,6 +40,19 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    {
+      resolve: `gatsby-source-google-calendar`,
+      options: {
+         calendarIds: [
+          'k2hj31l6g0efquag57r6nheju8@group.calendar.google.com',
+        ],  
+        // options to retrieve the next 10 upcoming events
+        timeMin: (new Date()).toISOString(),
+        maxResults: 10,
+        singleEvents: true,
+        orderBy: 'startTime',
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,

@@ -63,12 +63,12 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
               {enquire && (
                 <Button
                   className="btn"
-                  text="Enquire Now"
+                  text="Prenota ora il tuo volo"
                   as={Link}
                   to="/contact"
                 />
               )}
-              <Button onClick={scrollToArea} text="Learn More" />
+              <Button onClick={scrollToArea} text="Lascia che i tuoi sogni sfidino la gravità" />
             </div>
           </div>
         </div>

@@ -8,14 +8,16 @@ export const NavModuleStyles = styled.nav`
     left: 0;
     width: 100%;
     z-index: 100;
-    padding: 20px var(--borderSpacing) 0 var(--borderSpacing);
+    padding: 10px var(--borderSpacing) 10px var(--borderSpacing); 
+   /*  padding: 10px 10px; */
+    background:#fff;
 
     @media (min-width: 1024px) {
-      padding-top: 50px;
+     /*  padding-top: 10px; */
     }
 
     @media (min-width: 1440px) {
-      padding-top: 70px;
+     /*  padding-top: 10px; */
     }
   }
 
@@ -26,8 +28,46 @@ export const NavModuleStyles = styled.nav`
     height: 100%;
   }
 
+  
+
+  .logoImage {
+    img {
+      max-height: 70px;
+      width: auto;
+    }
+  }
+
+  .logo-wrapper {
+      flex-direction: column;
+  
+    .logo_text {
+      color: #fff;
+      text-shadow: var(--textShadow);
+    }
+
+    .logo_text_social {
+      color: #fff;
+      justify-content: flex-end;
+      display: flex;
+      font-size: 19px;
+      gap:5px;
+    }
+
+  }
+
+  .logo_image_social {
+    display:flex;
+    flex-direction:column;
+    color:var(--primary);
+    font-size: 20px;
+    justify-content: space-between;
+  }
+  
+
+
+
   .menu {
-    background-color: #000;
+    background-color: #c30f1a;
     width: var(--menuWidth);
     transform: translateX(calc(var(--menuWidth) * -1));
     height: 100%;
@@ -156,6 +196,11 @@ export const HamburgerStyles = styled(motion.button)`
       margin-top: 8px;
       margin-bottom: 8px;
     }
+  }
+
+  &.background {
+    .bar {
+      background-color: #c30f1a;
   }
 `
 
