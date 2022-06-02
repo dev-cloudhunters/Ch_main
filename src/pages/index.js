@@ -16,6 +16,7 @@ import {
 
 const Index = () => {
 
+  // TODO RIMUOVERE
   const config = {
     "clientId": "1054852907272-gtpqgjbk2mhik49f3lud8j9kae3qaut6.apps.googleusercontent.com",
     "apiKey": "AIzaSyA_XZmgASLpFqUXUG9FwWjv5LCfqppY-X4",
