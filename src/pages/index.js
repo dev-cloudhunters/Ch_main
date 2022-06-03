@@ -8,9 +8,13 @@ import Perk from "../components/PerksModule/Perk"
 import Features from "../components/Features/Features"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
+import useAllEvent from "..//hooks/use-all-event"
 
 
 const Index = () => {
+
+  const allEvent = useAllEvent()
+  console.log("useAllEvent",allEvent)
 
   function sendTrigger() {
     const headers = new Headers()
@@ -40,15 +44,15 @@ const Index = () => {
           subTitle="VIENI A VOLARE CON NOI"
           enquire={true}
         />
-        <button onClick={(e) => handleItemClick(e, 'sign-in')}>sign-in</button>
+      {/*   <button onClick={(e) => handleItemClick(e, 'sign-in')}>sign-in</button>
         <button onClick={(e) => handleItemClick(e, 'sign-out')}>   sign-out
-        </button>
+        </button> */}
         <button onClick={(e) => sendTrigger()}>
           sendTrigger 
         </button>
-        <button onClick={(e) => testRemove()}>
+      {/*   <button onClick={(e) => testRemove()}>
           remove
-        </button>
+        </button> */}
         <Testimonials />
         <BasicTextModule
           title="A super-fast theme that is easy to get started, using the power of
