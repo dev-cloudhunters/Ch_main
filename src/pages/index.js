@@ -8,37 +8,9 @@ import Perk from "../components/PerksModule/Perk"
 import Features from "../components/Features/Features"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
-import ApiCalendar from 'react-google-calendar-api';
-import {
-  SyntheticEvent,
-  useState,
-} from 'react';
+
 
 const Index = () => {
-
-  // TODO RIMUOVERE
-  const config = {
-    "clientId": "1054852907272-gtpqgjbk2mhik49f3lud8j9kae3qaut6.apps.googleusercontent.com",
-    "apiKey": "AIzaSyA_XZmgASLpFqUXUG9FwWjv5LCfqppY-X4",
-    "scope": "https://www.googleapis.com/auth/calendar",
-    "discoveryDocs": [
-      "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
-    ]
-  }
-
-  const apiCalendar = new ApiCalendar(config)
-
-  const handleItemClick = (event, name) => {
-    if (name === 'sign-in') {
-      apiCalendar.handleAuthClick()
-    } else if (name === 'sign-out') {
-      apiCalendar.handleSignoutClick();
-    }
-  };
-
-  const testRemove = () => {
-    apiCalendar.deleteEvent('d4a3b6f5-177c-5e37-ad5b-1c0f4a7f1163').then(console.log);
-  }
 
   function sendTrigger() {
     const headers = new Headers()
