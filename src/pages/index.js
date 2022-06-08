@@ -11,7 +11,7 @@ import Perk from "../components/PerksModule/Perk"
 import Features from "../components/Features/Features"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
-import InnerModal from "../components/Modal/InnerModal"
+//import InnerModal from "../components/Modal/InnerModal"
 //import Modal from '../components/Modal/Modal.js';
 import Modal from 'react-modal';
 import { ModalStyles } from "../components/Modal/ModalStyles"
@@ -19,11 +19,14 @@ import { ModalStyles } from "../components/Modal/ModalStyles"
 import useAllEvent from "../hooks/use-all-event"
 import useFeaturedProduct from "../hooks/use-featured-product"
 import { useMainStore } from '../components/MainStore';
+import loadable from '@loadable/component'
 //import Modal from 'react-modal';
 
 const Index = () => {
   /* const [modalIsOpen, setIsOpen] = useState(false); */
   const [state, actions] = useMainStore();
+
+  const InnerModal = loadable(() => import('../components/Modal/InnerModal'))
   
   const allEvent = useAllEvent()
   const featuredProduct = useFeaturedProduct()
