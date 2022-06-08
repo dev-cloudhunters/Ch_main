@@ -7,7 +7,7 @@ const useCarouselHome = () => {
     query carouselHome {
         contentfulCarouselHome {
             imageGallery {
-                gatsbyImageData(cropFocus: BOTTOM_LEFT)
+              gatsbyImageData(cropFocus: BOTTOM_LEFT, formats: WEBP)
             }
           }
     }
