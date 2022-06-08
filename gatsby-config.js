@@ -8,17 +8,17 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: "Barcadia",
+    title: "CloudHunters",
     description: "A super-fast site using GatsbyJS",
-    author: "Morgan Baker",
+    author: "Emiliano Pallini",
     twitterUsername: "barcadia",
     facebookUsername: "barcadia",
     instagramUsername: "barcadia",
-    linkedinUsername: "morgan-baker-development",
+    linkedinUsername: "Emiliano Pallini",
     image: "/macbook-color.jpg",
-    siteUrl: "https://barcadia.netlify.com",
-    developerName: "Morgan Baker Development",
-    developerUrl: "https://www.morganbaker.dev",
+    siteUrl: "https://todbertuzi.com",
+    developerName: "Emiliano Pallini",
+    developerUrl: "https://todbertuzi.com",
   },
   /* Your site config here */
   plugins: [
@@ -48,11 +48,29 @@ module.exports = {
         ],  
         // options to retrieve the next 10 upcoming events
         timeMin: (new Date()).toISOString(),
-        maxResults: 10,
+        maxResults: 100,
         singleEvents: true,
         orderBy: 'startTime',
       }
     },
+    /* {
+      resolve: `gatsby-source-google-calendar-events`,
+      options: {
+        includedFields: ['start', 'end', 'summary', 'status', 'organizer', 'description', 'location'],
+        calendarId: '',
+        assumedUser: '',
+        envVar: '',
+        pemFilePath: '',
+        // only events after today
+        timeMin: moment().format(),
+        // only events two years from now
+        timeMax: moment().add(2, 'y').format(),
+        scopes: [
+            `https://www.googleapis.com/auth/calendar.events.readonly`,
+            `https://www.googleapis.com/auth/calendar.readonly`
+        ]
+      }
+    }, */
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,

@@ -244,6 +244,7 @@ const NavModule = () => {
                 </li>
                 <hr />
                 {featuredProduct.map((item, index) => {
+                  /* console.log("item",item) */
                   const { gatsbyPath, title } = item
                   return (
                     <li key={index}>

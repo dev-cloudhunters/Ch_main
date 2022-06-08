@@ -20,6 +20,12 @@ export const FeaturedProductsStyles = styled.section`
       }
     }
   }
+
+  .features__item--prenota {
+    z-index:2;
+    color:#fff;
+    position:relative;
+  }
 `
 
 export const FeaturedProductStyles = styled.aside`
@@ -94,11 +100,17 @@ export const FeaturedProductStyles = styled.aside`
     }
 
     h4 {
-      color: #333;
+      color: #fff;
     }
 
     p {
-      color: var(--bodyColor);
+      color: #fff;
+    }
+
+    .features__item--prenota,
+    .features__item--readmore {
+      color: #fff;
+      display:block;
     }
   }
 

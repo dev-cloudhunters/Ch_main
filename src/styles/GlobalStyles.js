@@ -282,4 +282,24 @@ blockquote {
   text-align: center;
   margin-top: calc(var(--gap) / 2);
 }
+
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: papayawhip;
+  width: 500px;
+  height: 400px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.9);
+}
 `
