@@ -25,13 +25,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-remark-images-contentful`,
-      options: {
-        // This should be the maximum width that your content containers can be.
-        maxWidth: 1680,
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
