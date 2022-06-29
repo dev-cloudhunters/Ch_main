@@ -1,6 +1,22 @@
 import styled from "styled-components"
 
 export const FeaturedProductsStyles = styled.section`
+  &.section-custom { 
+  margin-top:0;
+  padding-top: calc(var(--sectionMargin) / 2 );
+  background: var(--primary);
+  border-top:4px solid #fff;
+  }
+
+  .intro__area {
+    color:#fff;
+    margin-bottom: calc(var(--gap) * 1);
+
+    p {
+      color:#fff;
+    }
+  }
+
   > div {
     &.container__scroll {
       gap: calc(var(--gap) / 2);
@@ -22,10 +38,108 @@ export const FeaturedProductsStyles = styled.section`
   }
 
   .features__item--prenota {
+    width:100%;
+    padding-bottom:15px;
+    text-align:left;
+    border:0;
+    background: transparent;
+    font-size: var(--h5);
+    font-weight: 700;
+    padding-left:0;
+    align-items: center;
+    
+    & svg {
+      margin-left:10px;
+    }
+  }
+
+  .features__item--prenota::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    background-color: var(--primary);
+    transition: left 0.3s ease;
+  }
+
+  @media (hover: hover) {
+    .features__item--prenota:hover {
+      cursor: pointer;
+      color: var(--primary);
+
+      &::after {
+        left: 100%;
+      }
+    }
+  }
+
+  .features__item--prenota {
     z-index:2;
     color:#fff;
     position:relative;
   }
+
+  .features__item--img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .features__item--content {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    padding: 20px 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    @media (min-width: 768px) {
+      padding: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 40px 20px;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 50px 30px;
+    }
+
+    h4,
+    p {
+      text-shadow: var(--textShadow);
+    }
+
+    h4 {
+      color: #fff;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    .features__item--prenota,
+    .features__item--readmore {
+      color: #fff;
+      display:flex;
+      flex-grow;1;
+    }
+  }
+
+  
 `
 
 export const FeaturedProductStyles = styled.aside`
@@ -37,8 +151,9 @@ export const FeaturedProductStyles = styled.aside`
   scroll-margin-left: 25px;
   position: relative;
   border-radius: 6px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  border: 4px solid rgba(255, 255, 255, 1);
   transition: border-color 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: var(--boxShadowLight);
 
   @media (min-width: 414px) {
     min-height: 434px;
@@ -110,7 +225,8 @@ export const FeaturedProductStyles = styled.aside`
     .features__item--prenota,
     .features__item--readmore {
       color: #fff;
-      display:block;
+      display:flex;
+      flex-grow;1;
     }
   }
 

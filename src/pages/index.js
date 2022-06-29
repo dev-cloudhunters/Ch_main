@@ -11,6 +11,7 @@ import Perk from "../components/PerksModule/Perk"
 import Features from "../components/Features/Features"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
+import CheckAvalaible from "../components/CheckAvalaible/CheckAvalaible"
 //import InnerModal from "../components/Modal/InnerModal"
 //import Modal from '../components/Modal/Modal.js';
 import Modal from 'react-modal';
@@ -20,6 +21,7 @@ import useAllEvent from "../hooks/use-all-event"
 import useFeaturedProduct from "../hooks/use-featured-product"
 import { useMainStore } from '../components/MainStore';
 import loadable from '@loadable/component'
+
 //import Modal from 'react-modal';
 
 const Index = () => {
@@ -27,14 +29,26 @@ const Index = () => {
   const [state, actions] = useMainStore();
 
   const InnerModal = loadable(() => import('../components/Modal/InnerModal'))
-  
-  const allEvent = useAllEvent()
+
+  //const allEvent = useAllEvent()
+  const allEvent = null 
   const featuredProduct = useFeaturedProduct()
   const innerModalEl = useRef(null);
   const contentRef = useRef(null);
 
   console.log("useAllEvent", allEvent)
   console.log("featuredProduct", featuredProduct)
+
+  React.useEffect(() => {
+    console.log("isOpen index", state.isOpen)
+
+    if (state.isOpen) {
+      document.body.classList.add('openCheck');
+    } else {
+      document.body.classList.remove('openCheck');
+    }
+
+  }, [state.isOpen]);
 
   
   /* useEffect(() => {
@@ -62,14 +76,12 @@ const Index = () => {
     console.log("ProductContext",ProductContext)
   }, [])  */
 
-  useEffect(() => {
-    console.log("state.isOpen from index", state.isOpen)
-    
-  }, [state.isOpen]);
+  
+
 
   function openModal() {
     //setIsOpen(true);
-    actions.update_is_open(true,"")
+    actions.update_is_open(true, "")
   }
 
   function afterOpenModal() {
@@ -129,18 +141,18 @@ const Index = () => {
         {/*   <button onClick={(e) => handleItemClick(e, 'sign-in')}>sign-in</button>
         <button onClick={(e) => handleItemClick(e, 'sign-out')}>   sign-out
         </button> */}
-        <button onClick={(e) => sendTrigger()}>
+        {/*  <button onClick={(e) => sendTrigger()}>
           sendTrigger
-        </button>
+        </button> */}
         {/*   <button onClick={(e) => testRemove()}>
           remove
         </button> */}
-        
+
         {/* <ProductContext.Provider value={value}> */}
-          <Features
-            title="Vola con noi"
-            introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
-          />
+        <Features
+          title="Lascia che i tuoi sogni sfidino la gravità"
+          introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
+        />
         {/* </ProductContext.Provider> */}
         <Testimonials />
         <BasicTextModule
@@ -167,7 +179,7 @@ const Index = () => {
 
 
       </Layout>
-      <Modal
+      {<Modal
         isOpen={state.isOpen}
         style={customStyles}
         onAfterOpen={afterOpenModal}
@@ -178,11 +190,13 @@ const Index = () => {
         overlayClassName="Overlay"
         preventScroll={true}
         customProp={"test"}
-
       >
         <button onClick={closeModal}>close</button>
-        <InnerModal customProp="test" events={allEvent} />
-      </Modal>
+        <InnerModal customProp="test" /* events={allEvent} */ />
+      </Modal>}
+      {/* <CheckAvalaible isOpen={state.isOpen}/> */}
+      {/*  <div id="checkAvailable">Prima di procedere <span>controlla la disponibilità</span></div> */}
+
     </>
   )
 }

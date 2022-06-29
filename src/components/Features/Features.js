@@ -5,6 +5,8 @@ import { FeaturedProductsStyles } from "./FeaturesStyles"
 import FeaturedProduct from "./FeaturedProduct"
 import useFeaturedProduct from "../../hooks/use-featured-product"
 import Button from "../Button/Button"
+//import { Grommet, Box, Card, ThemeContext } from 'grommet';
+//import  theme  from '../../styles/Theme.js';
 
 //import {ProductContext} from '../../components/ProductContext';
 //import ProdContext from '../../components/ProdContext';
@@ -19,7 +21,7 @@ const Features = ({ title, introduction }) => {
   
   return (
     
-    <FeaturedProductsStyles className="section">
+    <FeaturedProductsStyles className="section section-custom">
      
       {title || introduction ? (
         <div className="container container__tight">
@@ -29,12 +31,14 @@ const Features = ({ title, introduction }) => {
           </div>
         </div>
       ) : null}
-
+     
+       
       <div className="container container__tight container__scroll">
         {featuredProduct.map((node, index) => {
           return <FeaturedProduct feature={node} key={index} />
         })}
-      </div>
+       </div> 
+     
       <div className="container container__tight learn__more">
         <Button as={Link} to="/products" text="All Products" />
       </div>

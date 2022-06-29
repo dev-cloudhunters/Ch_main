@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   --inActive: #555;
   --letterSpacing: -0.075rem;
   --boxShadow: 0px 15px 22px 3px rgba(0, 0, 0, 0.55);
+  --boxShadowLight:  rgb(0 0 0 / 20%) 0px 2px 4px;
   --textShadow: 0px 0px 5px rgba(0, 0, 0, 1);
   --textShadowWhite: 0px 0px 2px rgba(255, 255, 255, 0.5);
   --p: 14px;
@@ -86,6 +87,19 @@ body {
     color: #333;
     overflow-x: hidden;
     font-size: var(--p);
+}
+
+body.openCheck {
+   overflow:hidden; 
+}
+
+.refEl {
+  z-index:1052;
+  display:none !important;
+  background: #c30f1a;
+  width: 270px;
+  height: 300px;
+  border-radius: 20px;
 }
 
 h1,
@@ -285,14 +299,16 @@ blockquote {
 
 .Modal {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  bottom: 40px;
+  left: 140px;
   right: 40px;
   bottom: 40px;
-  background-color: papayawhip;
+  /* background-color: red; */
   width: 500px;
   height: 400px;
 }
+
+
 
 .Overlay {
   position: fixed;
@@ -301,5 +317,79 @@ blockquote {
   right: 0;
   bottom: 0;
   background-color: rgba(255,255,255,0.9);
+}
+
+.refEl .react-datepicker__input-container {
+  display:none;
+}
+
+.react-datepicker__time-list-item.react-datepicker__time-list-item--disabled {
+  display:none;
+}
+
+
+.react-datepicker .react-datepicker__day {
+  color: var(--primary) !important;
+}
+
+.react-datepicker .react-datepicker__day--disabled {
+  color: #ccc !important;
+}
+
+.react-datepicker .react-datepicker__day--selected {
+  color: #fff !important;
+}
+
+
+.react-datepicker {
+  display:flex;
+  flex-direction:column-reverse;
+
+  .react-datepicker__header {
+      border-bottom:0;
+
+      .react-datepicker__day-name {
+          text-transform: uppercase;
+          font-size: 11px;
+          font-weight: 500;
+          color: var(--primary);
+      }
+
+      .react-datepicker__current-month {
+          color: var(--primary);
+          text-transform:capitalize;
+      }
+  }
+
+  .react-datepicker__day {
+      box-sizing: border-box !important;
+      font-size: 14px !important;
+      text-align: center !important;
+      cursor: default !important;
+      background: rgb(255, 255, 255) ;
+      border: 1px solid rgb(228, 231, 231) !important;
+      color: rgb(202, 204, 205);
+  }
+
+  .react-datepicker__day--selected {
+      background: var(--primary) ;
+      color:#fff;
+  }
+
+  
+
+  .react-datepicker__triangle {
+      display:none;
+  }
+
+  .react-datepicker__time-container  {
+      width:100%;
+
+      .react-datepicker__time-list {
+          height: auto !important;
+      }
+  }
+
+  
 }
 `

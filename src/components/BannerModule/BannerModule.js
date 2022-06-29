@@ -68,7 +68,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
                   to="/contact"
                 />
               )}
-              <Button onClick={scrollToArea} text="Lascia che i tuoi sogni sfidino la gravità" />
+              {/* <Button onClick={scrollToArea} text="Lascia che i tuoi sogni sfidino la gravità" /> */}
             </div>
           </div>
         </div>
