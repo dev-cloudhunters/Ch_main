@@ -12,6 +12,7 @@ import Features from "../components/Features/Features"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
 import CheckAvalaible from "../components/CheckAvalaible/CheckAvalaible"
+import FormComp from "../components/Form/Form";
 //import InnerModal from "../components/Modal/InnerModal"
 //import Modal from '../components/Modal/Modal.js';
 import Modal from 'react-modal';
@@ -176,7 +177,7 @@ const Index = () => {
         {/*  <Modal show={modalIsOpen} handleClose={closeModal}>
           <p>Modal</p>
         </Modal> */}
-
+      <FormComp />
 
       </Layout>
       {<Modal
