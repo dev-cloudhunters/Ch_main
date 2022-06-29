@@ -15,7 +15,7 @@ import Lottie from "lottie-react"
 import data from "../../../static/calendar_lottie.json"
 import { Grommet, Box, List, Menu, Text, ListItem, Button, Heading, RadioButtonGroup } from 'grommet';
 import { Clock, LinkPrevious, Edit, Checkmark } from 'grommet-icons';
-import { theme } from '../../Styles/Theme.js'
+import { theme } from '../../styles/Theme.js'
 function useMergeState(initialState) {
     const [state, setState] = React.useState(initialState);
     const setMergedState = newState =>

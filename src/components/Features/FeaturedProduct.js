@@ -6,10 +6,10 @@ import { FeaturedProductStyles } from "./FeaturesStyles"
 import { useMainStore } from '../MainStore';
 import { BsBookmarkCheck } from "react-icons/bs"
 //import { Grommet, Box, Card, ThemeContext } from 'grommet';
-import theme from '../../styles/Theme.js';
-import { base } from 'grommet/themes'
+//import theme from '../../styles/Theme.js';
+//import { base } from 'grommet/themes'
 
-console.log("theme", theme)
+
 /* import { useModal } from "../../components/Stores/ModalStore" */
 //import { ProductContext, product } from '../../components/ProductContext';
 //import {ProductContext, product} from '../../components/ProductContext';
