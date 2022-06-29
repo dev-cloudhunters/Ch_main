@@ -48,7 +48,10 @@ const FormComp = ({ title, introduction }) => {
     }}
   >
   {() => (
-    <Form name="contact-demo" data-netlify={true}>
+    <Form name="contact-demo" data-netlify={true} data-netlify-honeypot="bot-field">
+        <Field type="hidden" name="form-name" />
+        <Field type="hidden" name="bot-field" />
+
       <label htmlFor="name">Name: </label>
       <Field name="name" />
       <ErrorMessage name="name" />
