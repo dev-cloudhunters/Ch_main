@@ -181,7 +181,10 @@ const Index = () => {
           data-item-id="starry-night"
           data-item-price="79.99"
           data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
-          data-item-name="The Starry Night">
+          data-item-name="The Starry Night"
+          data-item-max-quantity="1"
+          data-item-custom2-name="Voucher">
+            
           Add to cart
         </button>
 
