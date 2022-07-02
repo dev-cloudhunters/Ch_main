@@ -97,21 +97,31 @@ module.exports = {
           },
         },
         templatesUrl:
-          "path on your template file. Set file in the static folder, ex: '/snipcart/index.html'",
+        //  "path on your template file. Set file in the static folder, ex: '/snipcart/index.html'",
         // not work on dev. Gatsby not serve html file in dev https://github.com/gatsbyjs/gatsby/issues/13072
+        'https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css',
         innerHTML: `
-            <billing section="bottom">
-                <!-- Customization goes here -->
-                <address-fields section="top">
-                <div>
-                    <snipcart-label for="phone">
-                        Phone number
-                    </snipcart-label>
-                    <snipcart-input name="phone">
-                    </snipcart-input>
-                </div>
-                </address-fields>
-            </billing>`,
+        <billing section="bottom">
+        <div>
+          <fieldset class="snipcart-form__set">
+            <div class="snipcart-form__field">
+                <snipcart-label class="snipcart__font--tiny" for="society">
+                {{ $localize('address_form.society') }}
+                </snipcart-label>
+                <snipcart-input name="society"></snipcart-input>
+            </div>
+          </fieldset>
+          <fieldset class="snipcart-form__set">
+            <div class="snipcart-form__field">
+              <snipcart-label class="snipcart__font--tiny" for="vatNumber">
+                {{ $localize('address_form.vat') }}
+              </snipcart-label>
+              <snipcart-input name="vatNumber"></snipcart-input>
+            </div>
+          </fieldset>
+        </div>
+      </billing>
+    `,
             /* `<div id="snipcart" data-api-key="<api_key>" hidden>
                 <address-fields section="top">
                     <div>
