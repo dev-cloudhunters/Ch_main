@@ -7,6 +7,10 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
+  /* ABILITA l'SSR SOLO PER IL DEV */
+  flags: {
+    DEV_SSR: true
+  },
   siteMetadata: {
     title: "CloudHunters",
     description: "A super-fast site using GatsbyJS",
@@ -75,5 +79,51 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-snipcart-advanced`,
+      options: {
+        version: "3.0.29",
+        publicApiKey: "#####", // use public api key here or in environment variable
+        defaultLang: "it",
+        currency: "eur",
+        openCartOnAdd: true,
+        useSideCart: false,
+        // be careful with this mode cart. The cart in this mode has a bug of scroll in firefox
+        locales: {
+          it: {
+            actions: {
+              checkout: "Conferma il carrello",
+            },
+          },
+        },
+        templatesUrl:
+          "path on your template file. Set file in the static folder, ex: '/snipcart/index.html'",
+        // not work on dev. Gatsby not serve html file in dev https://github.com/gatsbyjs/gatsby/issues/13072
+        innerHTML: `
+            <billing section="bottom">
+                <!-- Customization goes here -->
+                <address-fields section="top">
+                <div>
+                    <snipcart-label for="phone">
+                        Phone number
+                    </snipcart-label>
+                    <snipcart-input name="phone">
+                    </snipcart-input>
+                </div>
+                </address-fields>
+            </billing>`,
+            /* `<div id="snipcart" data-api-key="<api_key>" hidden>
+                <address-fields section="top">
+                    <div>
+                        <snipcart-label for="phone">
+                            Phone number
+                        </snipcart-label>
+                        <snipcart-input name="phone">
+                        </snipcart-input>
+                    </div>
+                </address-fields>
+            </div>` */
+      },
+    },
   ],
 }

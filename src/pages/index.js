@@ -12,13 +12,12 @@ import Features from "../components/Features/Features"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
 import CheckAvalaible from "../components/CheckAvalaible/CheckAvalaible"
-import FormComp from "../components/Form/Form";
 //import InnerModal from "../components/Modal/InnerModal"
 //import Modal from '../components/Modal/Modal.js';
 import Modal from 'react-modal';
 import { ModalStyles } from "../components/Modal/ModalStyles"
 
-import useAllEvent from "../hooks/use-all-event"
+//import useAllEvent from "../hooks/use-all-event"
 import useFeaturedProduct from "../hooks/use-featured-product"
 import { useMainStore } from '../components/MainStore';
 import loadable from '@loadable/component'
@@ -32,12 +31,12 @@ const Index = () => {
   const InnerModal = loadable(() => import('../components/Modal/InnerModal'))
 
   //const allEvent = useAllEvent()
-  const allEvent = null 
+  //const allEvent = null 
   const featuredProduct = useFeaturedProduct()
   const innerModalEl = useRef(null);
   const contentRef = useRef(null);
 
-  console.log("useAllEvent", allEvent)
+  //console.log("useAllEvent", allEvent)
   console.log("featuredProduct", featuredProduct)
 
   React.useEffect(() => {
@@ -51,7 +50,7 @@ const Index = () => {
 
   }, [state.isOpen]);
 
-  
+
   /* useEffect(() => {
     console.log("product", product)
     
@@ -77,7 +76,7 @@ const Index = () => {
     console.log("ProductContext",ProductContext)
   }, [])  */
 
-  
+
 
 
   function openModal() {
@@ -177,12 +176,20 @@ const Index = () => {
         {/*  <Modal show={modalIsOpen} handleClose={closeModal}>
           <p>Modal</p>
         </Modal> */}
-      <FormComp />
+
+        <button class="snipcart-add-item"
+          data-item-id="starry-night"
+          data-item-price="79.99"
+          data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+          data-item-name="The Starry Night">
+          Add to cart
+        </button>
 
       </Layout>
       {<Modal
         isOpen={state.isOpen}
         style={customStyles}
+        shouldCloseOnOverlayClick={false}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
@@ -192,8 +199,8 @@ const Index = () => {
         preventScroll={true}
         customProp={"test"}
       >
-        <button onClick={closeModal}>close</button>
-        <InnerModal customProp="test" /* events={allEvent} */ />
+        <button onClick={closeModal}>closeNow</button>
+        <InnerModal handleClose={closeModal} /* events={allEvent} */ />
       </Modal>}
       {/* <CheckAvalaible isOpen={state.isOpen}/> */}
       {/*  <div id="checkAvailable">Prima di procedere <span>controlla la disponibilità</span></div> */}

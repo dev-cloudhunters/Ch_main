@@ -249,6 +249,17 @@ blockquote {
     }
 }
 
+.section_no_top {
+   margin-top: 0
+  margin-bottom: var(--sectionMargin);
+  padding: 0 var(--borderSpacing);
+
+  &.section__padding {
+      padding-top: 0;
+      padding-bottom: var(--sectionMargin);
+  }
+}
+
 .intro__area {
   margin-bottom: calc(var(--gap) * 2);
   max-width: 700px;
@@ -389,7 +400,28 @@ blockquote {
           height: auto !important;
       }
   }
+}
 
+.formPage {
+  background: var(--primary);
+  height: 100vh;
+  position: relative;
+  padding: 10px var(--borderSpacing);
   
+  .formHolder {
+    display:flex;
+    flex-direction:column;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: var(--bannerTitle);
+    border-bottom: 2px solid rgba(255,255,255,0.15);
+    display: inline-block;
+    margin-bottom: 0;
+    text-shadow: var(--textShadow);
+    color: #fff;
+    line-height: 0.75em;
+  }
 }
 `

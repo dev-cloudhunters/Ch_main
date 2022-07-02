@@ -5,6 +5,9 @@ export const BannerModuleStyles = styled.section`
   position: relative;
   padding: 30px var(--borderSpacing);
 
+  &.banner_short {
+    height: 65vh;
+  }
   .gatsby-image-wrapper {
     img {
       object-position: right;

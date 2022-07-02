@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+/* import { graphql, useStaticQuery } from "gatsby"
 
 const useAllEvent = () => {
   const {
@@ -29,3 +29,4 @@ const useAllEvent = () => {
 }
 
 export default useAllEvent
+ */

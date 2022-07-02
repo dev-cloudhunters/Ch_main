@@ -6,7 +6,7 @@ import Button from "../Button/Button"
 import useCarouselHome from "../../hooks/use-carousel-home"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const BannerModule = ({ children, title, subTitle, price, enquire }) => {
+const BannerModule = ({ children, title, subTitle, price, enquire,className }) => {
 
   const carousel = useCarouselHome()
   const image = getImage(carousel[0])
@@ -30,7 +30,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
 
   return (
     <>
-      <BannerModuleStyles>
+      <BannerModuleStyles className={className?className:""}>
         {children ? (
           children
         ) : (
