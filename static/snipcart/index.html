@@ -40,13 +40,20 @@
     
                 <div class="snipcart-cart__footer-col">
                     <span>PROVA</span>
-                    <!-- <summary-fees
+                   <!--  <summary-fees
                         class="snipcart-cart-summary-fees--reverse"
                         :summary-data="summaryFeesProvider"
                     >
                         {{ $localize('cart.shipping_taxes_calculated_at_checkout')}}
 
-                    </summary-fees> -->
+                    </summary-fees>  -->
+                    <summary-fees
+                    class="snipcart-cart-summary-fees--reverse"
+                    :summaryData="summaryFeesProvider"
+                >
+                    {{ $localize('cart.shipping_taxes_calculated_at_checkout')}}
+
+                </summary-fees>
     
                     <footer v-if="!editingCart || isSideCart" class="snipcart-cart__footer-buttons">
                         <flash-message
