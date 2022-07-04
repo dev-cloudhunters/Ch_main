@@ -427,5 +427,6 @@ blockquote {
 
 #snipcart {
   z-index:102;
+  position:relative;
 }
 `
