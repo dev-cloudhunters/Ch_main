@@ -9,21 +9,13 @@
 
     <div id="snipcart-templates">
        
-        <summary-fees
-        class="snipcart-cart-summary-fees--reverse"
-        :summaryData="summaryFeesProvider"
-      >
-        <div class="root">
-          <div>
-            
-              Important Tax Exempt Info
-            
-          </div>
-          <div>
-            {{ $localize('cart.shipping_taxes_calculated_at_checkout')}}
-          </div>
-        </div>
-      </summary-fees>
+        <cart-summary section="items">
+            <div class="root">
+                <cart-summary-items-list class="snipcart-cart-summary__items"></cart-summary-items-list>
+                <hr class="snipcart-cart-summary__separator" />
+                <a href="http" target="_blank" rel="noopener noreferrer">My custom link</a>
+            </div>
+        </cart-summary>
     </div>
 
 </body>
