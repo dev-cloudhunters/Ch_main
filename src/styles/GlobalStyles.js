@@ -424,4 +424,8 @@ blockquote {
     line-height: 0.75em;
   }
 }
+
+#snipcart {
+  z-index:102;
+}
 `
