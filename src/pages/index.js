@@ -183,9 +183,16 @@ const Index = () => {
           data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
           data-item-name="The Starry Night"
           data-item-max-quantity="1"
-          data-item-custom1-name="Customers won't see this label in the cart test1"
+          data-item-custom1-name="Data in cui volerai"
           data-item-custom1-type="hidden"
-          data-item-custom1-value="Customers won't see this value either test2"
+          data-item-custom1-value="17/01/77"
+          data-item-custom2-name="Regalo"
+          data-item-custom2-type="hidden"
+          data-item-custom2-value="Si"
+          data-item-custom3-name="Tipologia volo"
+          data-item-custom3-type="hidden"
+          data-item-custom3-value="volo tandem fly"
+          data-item-has-taxes-included="true"
           >
 
           Add to cart
