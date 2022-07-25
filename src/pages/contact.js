@@ -8,12 +8,12 @@ import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 const contact = () => {
   return (
     <>
-      <Seo title="Contact" />
+      <Seo title="Contatti" />
       <Layout>
         <SimpleBanner title="Get in touch">
           <StaticImage
             className="banner__image"
-            src="../../static/macbook-dark.jpg"
+            src="../../static/cover_contatti.jpg"
             alt="Apple Macbook Dark"
           />
         </SimpleBanner>

@@ -160,9 +160,9 @@ const Index = () => {
         />
         <div className="section section_no_top_no_bottom">
           <div className="holder-iframe-testimonials">
-            <div className="responsive-iframe">
+            {/* <div className="responsive-iframe">
               <iframe src="https://player.vimeo.com/video/283203062?h=d63deecc71&title=0&byline=0&portrait=0" width="640" height="360" frameBorder='0' ></iframe>
-            </div>
+            </div> */}
             <Testimonials />
           </div>
 
@@ -194,10 +194,10 @@ const Index = () => {
         </Modal> */}
 
         <button className="snipcart-add-item"
-          data-item-id="starry-night"
-          data-item-price="10.99"
-          data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
-          data-item-name="The Starry Night"
+          data-item-id="volo-avventura"
+          data-item-price="90.00"
+          data-item-description="Volo 'Peter Pan'"
+          data-item-name="Volo Avventura"
           data-item-max-quantity="1"
           data-item-custom1-name="Data in cui volerai"
           data-item-custom1-type="readonly"
@@ -211,7 +211,7 @@ const Index = () => {
           data-item-has-taxes-included="true"
         >
 
-          Add to cart
+          Aggiungi al carrello
         </button>
 
       </Layout>
