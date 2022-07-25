@@ -43,7 +43,7 @@ export const BannerModuleStyles = styled.section`
   .banner__content {
     position: relative;
     z-index: 2;
-    min-height: 33vh;
+    min-height: 40vh;
     width: 100%;
     max-width: 700px;
 

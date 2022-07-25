@@ -3,16 +3,17 @@ import React, { useState,useReducer,createContext } from "react"
 const initialState = {
   isOpen: false,
   isBackground: false,
+  isSimple: false,
 }
 
 function reducer(state, action) {
   /*console.log("state",state)
   console.log("action",action)*/
   if(state.isOpen && action.isBackground){
-    action.isBackground = false;
+    //action.isBackground = false;
   }
   if( action.isOpen){
-    state.isBackground = false;
+    //state.isBackground = false;
   }
   return { ...state, ...action };
 }

@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import Seo from "../components/SEO"
 import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 import RichText from "../components/RichText"
+import Features from "../components/Features/Features"
 
 const DefaultTemplate = contentfulPage => {
   const headerImage = getImage(contentfulPage.headerImage)
@@ -19,6 +20,12 @@ const DefaultTemplate = contentfulPage => {
             <RichText richText={contentfulPage.mainContent} />
           </div>
         </div>
+        <Features
+          title="Hai mai sognato di volare in parapendio?"
+          introduction="Ora puoi facilmente soddisfare questo tuo desiderio ancestrale in totale sicurezza e tranquillità prenotando un volo in parapendio. Volare in parapendio biposto è un’esperienza unica e meravigliosa, una vera e propria passeggiata nel cielo, una fantastica sensazione che rimarrà impressa a vita nello scrigno delle tue avventure."
+          testo_chiusura="Possiamo realizzare questa meravigliosa avventura intorno a Roma, dai principali decolli del Lazio. La sensazione di potersi librare in aria come gli uccelli godendo dei panorami spettacolari che il nostro centro Italia può regalarci non ha prezzo soprattutto se puoi farlo insieme a piloti esperti e qualificati che condividono da anni questa passione."
+        />
+
       </Layout>
     </>
   )

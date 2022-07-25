@@ -9,6 +9,7 @@ import BasicTextModule from "../components/BasicTextModule/BasicTextModule"
 import PerksModule from "../components/PerksModule/PerksModule"
 import Perk from "../components/PerksModule/Perk"
 import Features from "../components/Features/Features"
+import Decolli from "../components/Decolli/Decolli"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
 import CheckAvalaible from "../components/CheckAvalaible/CheckAvalaible"
@@ -19,8 +20,11 @@ import { ModalStyles } from "../components/Modal/ModalStyles"
 
 //import useAllEvent from "../hooks/use-all-event"
 import useFeaturedProduct from "../hooks/use-featured-product"
+import useIlVolo from "../hooks/use-il_volo"
+
 import { useMainStore } from '../components/MainStore';
 import loadable from '@loadable/component'
+import { Box, Card, CardBody, CardFooter, CardHeader } from 'grommet';
 
 //import Modal from 'react-modal';
 
@@ -150,50 +154,62 @@ const Index = () => {
 
         {/* <ProductContext.Provider value={value}> */}
         <Features
-          title="Lascia che i tuoi sogni sfidino la gravità"
+          title="Hai mai sognato di volare in parapendio?"
+          introduction="Ora puoi facilmente soddisfare questo tuo desiderio ancestrale in totale sicurezza e tranquillità prenotando un volo in parapendio. Volare in parapendio biposto è un’esperienza unica e meravigliosa, una vera e propria passeggiata nel cielo, una fantastica sensazione che rimarrà impressa a vita nello scrigno delle tue avventure."
+          testo_chiusura="Possiamo realizzare questa meravigliosa avventura intorno a Roma, dai principali decolli del Lazio. La sensazione di potersi librare in aria come gli uccelli godendo dei panorami spettacolari che il nostro centro Italia può regalarci non ha prezzo soprattutto se puoi farlo insieme a piloti esperti e qualificati che condividono da anni questa passione."
+        />
+        <div className="section section_no_top_no_bottom">
+          <div className="holder-iframe-testimonials">
+            <div className="responsive-iframe">
+              <iframe src="https://player.vimeo.com/video/283203062?h=d63deecc71&title=0&byline=0&portrait=0" width="640" height="360" frameBorder='0' ></iframe>
+            </div>
+            <Testimonials />
+          </div>
+
+        </div>
+        <Decolli
+          title="Dove decolliamo"
           introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
         />
         {/* </ProductContext.Provider> */}
-        <Testimonials />
+
         <BasicTextModule
-          title="A super-fast theme that is easy to get started, using the power of
-            GatsbyJS"
-          content="Using modern CSS properties such as grid, this theme is optmised for
-            speed and mobile devices. Giving users an excellent experience on
-            any device. Future-proofing your product."
-          link="/products"
-          linkText="View Products"
+          /* title={ilvolo.titolo}
+          content={ilvolo.contenuto} */
+          hookref = {useIlVolo}
+          /* link="/products"
+          linkText="View Products" */
         />
         <PerksModule>
           <Perk title="The Title" content="The content" />
         </PerksModule>
 
         <LatestPosts
-          title="The Latest from Barcadia"
-          introduction="Cras scelerisque, tellus sed gravida tincidunt, velit tellus blandit justo, nec viverra augue erat in erat. Maecenas iaculis sed purus non fringilla."
+          title="Qualche lettura"
+          introduction=""
         />
         <button onClick={openModal}>Open Modal</button>
         {/*  <Modal show={modalIsOpen} handleClose={closeModal}>
           <p>Modal</p>
         </Modal> */}
 
-        <button class="snipcart-add-item"
+        <button className="snipcart-add-item"
           data-item-id="starry-night"
           data-item-price="10.99"
           data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
           data-item-name="The Starry Night"
           data-item-max-quantity="1"
           data-item-custom1-name="Data in cui volerai"
-          data-item-custom1-type="hidden"
+          data-item-custom1-type="readonly"
           data-item-custom1-value="17/01/77"
           data-item-custom2-name="Regalo"
-          data-item-custom2-type="hidden"
+          data-item-custom2-type="readonly"
           data-item-custom2-value="Si"
           data-item-custom3-name="Tipologia volo"
-          data-item-custom3-type="hidden"
+          data-item-custom3-type="readonly"
           data-item-custom3-value="volo tandem fly"
           data-item-has-taxes-included="true"
-          >
+        >
 
           Add to cart
         </button>

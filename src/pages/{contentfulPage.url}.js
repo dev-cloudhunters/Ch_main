@@ -16,7 +16,9 @@ const getTemplate = (contentfulPage) => {
 }
 
 const Page = ({ data: { contentfulPage } }) => {
-  return <main>{getTemplate(contentfulPage)}</main>
+  return <main>
+    {getTemplate(contentfulPage)}
+  </main>
 }
 
 export const data = graphql`

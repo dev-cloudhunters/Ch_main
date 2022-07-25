@@ -105,9 +105,9 @@ export const NavTopLevel = styled.ul`
     }
 
     &:hover {
-      color: var(--primary);
+      color: black;
       > a {
-        color: var(--primary);
+        color: black;
       }
     }
   }
@@ -157,7 +157,7 @@ export const SubNavStyles = styled(motion.ul)`
 
     &:hover {
       > a {
-        color: var(--primary);
+        color: black;
       }
     }
   }

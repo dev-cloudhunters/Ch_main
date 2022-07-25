@@ -13,7 +13,7 @@ import Button from "../Button/Button"
 //import { ProductProvider } from "'../../components/ProdContext"
 
 
-const Features = ({ title, introduction }) => {
+const Features = ({ title, introduction, testo_chiusura }) => {
   const featuredProduct = useFeaturedProduct()
  
   //console.log( state.date,"aoaoa")
@@ -38,10 +38,12 @@ const Features = ({ title, introduction }) => {
           return <FeaturedProduct feature={node} key={index} />
         })}
        </div> 
+
+       {testo_chiusura && <p className="testo_chiusura">{testo_chiusura}</p>}
      
-      <div className="container container__tight learn__more">
+      {/* <div className="container container__tight learn__more">
         <Button as={Link} to="/products" text="All Products" />
-      </div>
+      </div> */}
     </FeaturedProductsStyles>
     
   )

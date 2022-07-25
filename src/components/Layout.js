@@ -5,7 +5,8 @@ import Footer from "./Footer/Footer"
 import { motion } from "framer-motion"
 import { GlobalStyle } from "../styles/GlobalStyles"
 
-const Layout = ({ children }) => {
+const Layout = ({ children,styleNav }) => {
+ 
   return (
     <>
       <GlobalStyle />
@@ -15,7 +16,7 @@ const Layout = ({ children }) => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.75 }}
       >
-        <NavModule />
+        <NavModule styleNav={styleNav}/>
         <AnimMain>
           {children}
           <Footer />

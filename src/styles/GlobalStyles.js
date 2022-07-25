@@ -9,8 +9,10 @@ export const GlobalStyle = createGlobalStyle`
   --blockquote: 20px;
   --background: #fff;
   --primary: #c30f1a;
+  --primarysoft: rgba(195,15,26,0.6);
   --bodyColor: #333;
   --inActive: #555;
+  --lightGray: #e9e9e9;
   --letterSpacing: -0.075rem;
   --boxShadow: 0px 15px 22px 3px rgba(0, 0, 0, 0.55);
   --boxShadowLight:  rgb(0 0 0 / 20%) 0px 2px 4px;
@@ -24,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   --h6: 16px;
   --gap: 40px;
   --sectionMargin: 60px;
+  --sectionMargin_small: 30px;
 
   @media(min-width:375px) {
     --bannerTitle: 36px;    
@@ -249,6 +252,17 @@ blockquote {
     }
 }
 
+.section.custom-section {
+  margin-top: var(--sectionMargin_small);
+  margin-bottom: var(--sectionMargin_small);
+  padding: 0 var(--borderSpacing);
+
+  &.section__padding {
+      padding-top:  var(--sectionMargin_small);
+      padding-bottom:  var(--sectionMargin_small);
+  }
+}
+
 .section_no_top {
    margin-top: 0
   margin-bottom: var(--sectionMargin);
@@ -260,9 +274,20 @@ blockquote {
   }
 }
 
+.section_no_top_no_bottom {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 var(--borderSpacing);
+
+  &.section__padding {
+      padding-top: 0;
+      padding-bottom: var(--sectionMargin);
+  }
+}
+
 .intro__area {
   margin-bottom: calc(var(--gap) * 2);
-  max-width: 700px;
+  max-width: 100%;
 
   h2 {
     display: inline-block;
@@ -429,4 +454,124 @@ blockquote {
   z-index:102;
   position:relative;
 }
+
+.responsive-iframe {
+	max-width: 100%;
+	padding-top: 56.25%;
+	position: relative;
+	width: 100%;
+}
+
+.responsive-iframe iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.holder-iframe-testimonials {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+
+  .responsive-iframe {
+    margin-top:30px;
+    min-width:100%
+  }
+  .slideCarousel {
+    margin-bottom:60px;
+    a {
+      text-decoration:none;
+      display:flex;
+      justify-content:center;
+    }
+    p {
+      font-size: var(--h6)
+    }
+  }
+  .carousel-root {
+    margin-top:30px;
+    max-width:100%;
+    padding: 0 20px;
+
+    .control-dots {
+      .dot {
+        background: var(--primary);
+      }
+    }
+  }
+}
+
+@media(min-width:768px) {
+  .holder-iframe-testimonials {
+    flex-direction:row;
+    .responsive-iframe {
+      margin-top:0px;
+      min-width:50%
+    }
+    .carousel-root {
+      margin-top:0px;
+      max-width:50%;
+    }
+  }
+}
+
+.btn_prenota {
+  background: var(--primary);
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  color: white;
+  -webkit-transition: background 0.5s ease 0.2s,color 0.3s ease 0.3s;
+  transition: background 0.5s ease 0.2s,color 0.3s ease 0.3s;
+}
+
+.btn_prenota::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  left: 0;
+  right: 0;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+  background-color: var(--primarysoft);
+  bottom: 0;
+}
+
+.desc-text {
+  
+
+}
+
+.features__item--prenota {
+  width:100%;
+  padding-bottom:15px;
+  text-align:left;
+  border:0;
+  background: transparent;
+  font-size: var(--h5);
+  font-weight: 700;
+  padding-left:0;
+  align-items: center;
+  position:relative;
+  
+  & svg {
+    margin-left:10px;
+  }
+}
+
+.features__item--prenota::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  background-color: var(--primary);
+  transition: left 0.3s ease;
+}
+.
 `

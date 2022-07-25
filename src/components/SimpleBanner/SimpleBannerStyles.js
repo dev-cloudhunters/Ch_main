@@ -45,6 +45,7 @@ export const SimpleBannerStyles = styled.section`
       border-bottom: 2px solid rgba(255, 255, 255, 0.15);
       display: inline-block;
       text-shadow: var(--textShadow);
+      color:white;
     }
   }
 `

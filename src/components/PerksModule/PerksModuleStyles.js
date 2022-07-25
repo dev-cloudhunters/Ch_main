@@ -3,6 +3,15 @@ import styled from "styled-components"
 export const PerksModuleStyles = styled.section`
   background-color: #000;
   position: relative;
+  
+  .dx p, .sx p {
+    text-align: justify;
+  }
+
+  .ico-perks {
+    width:40px;
+    height:40px;
+  }
 
   .perks__image--bg,
   .perks__image--overlay {
@@ -21,7 +30,7 @@ export const PerksModuleStyles = styled.section`
   }
 
   .perks__image--overlay {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(255, 255, 255, 0.65);
   }
 
   .perks__divider {
@@ -66,6 +75,7 @@ export const PerkStyles = styled.aside`
 
   @media (min-width: 768px) {
     flex: 1 1 50%;
+
   }
 
   @media (min-width: 1024px) {
@@ -75,6 +85,7 @@ export const PerkStyles = styled.aside`
   h3 {
     display: inline-block;
     border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    margin-bottom:0;
   }
 
   p {

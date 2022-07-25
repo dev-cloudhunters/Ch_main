@@ -50,14 +50,14 @@ const InnerModal = ({ handleClose, show, children }) => {
 
     /* GAPI*/
     React.useEffect(() => {
-         /* axios.get(`https://eoqub82nojdku4t.m.pipedream.net/`)
+          axios.get(`https://eoqub82nojdku4t.m.pipedream.net/`)
             .then(res => {
                 console.log("res", res.data);
                 setEventsModal({ preload: true, events: res.data, phase: "date" });
                 //datepicker.current.includeDates = getDateDisponibili(res.data);
-            }) */
+            }) 
 
-             let eventsOld = {
+              let eventsOld = {
                 $return_value:{
                 "kind": "calendar#events",
                 "etag": "\"p33c9nr6mvb9fg0g\"",
@@ -488,8 +488,8 @@ const InnerModal = ({ handleClose, show, children }) => {
                         "eventType": "default"
                     }
                 ]
-            }}
-            setEventsModal({ preload: true, events: eventsOld, phase: "date" }); 
+            }} 
+            //setEventsModal({ preload: true, events: eventsOld, phase: "date" }); 
     }, [])
 
 

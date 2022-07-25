@@ -35,8 +35,8 @@ const Footer = () => {
         {allProduct.length > 0 && (
           <FooterMenuStyles className="footer__menu products__menu">
             <h5>
-              <Link to="/products">
-                All Products<span>.</span>
+              <Link to="/voli">
+                Tutti i voli<span>.</span>
               </Link>
             </h5>
             <ul>
@@ -62,7 +62,7 @@ const Footer = () => {
         siteMeta.linkedinUsername ? (
           <FooterMenuStyles className="footer__menu social__menu">
             <h5>
-              Follow Barcadia<span>.</span>
+              Follow CloudHunters<span>.</span>
             </h5>
             <ul>
               {siteMeta.twitterUsername && (

@@ -5,6 +5,7 @@ import Seo from "../../components/SEO"
 import Layout from "../../components/Layout"
 
 const Product = ({ data: { contentfulProduct } }) => {
+  console.log(contentfulProduct,"contentfulProduct")
   return (
     <>
       <Seo title={contentfulProduct.title} />
@@ -31,15 +32,19 @@ export const data = graphql`
       description {
         raw
       }
-      faqs {
-        question
-        answer {
-          raw
+      durataDelVolo
+      decollo {
+        titolo
+        posizione {
+          lat
+          lon
         }
       }
+      cosaComprende
       gallery {
         gatsbyImageData(
-          width: 1000
+          width: 450
+          height: 450
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )

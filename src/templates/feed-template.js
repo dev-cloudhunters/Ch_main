@@ -6,6 +6,7 @@ import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 import ProductFeed from "../components/Feeds/ProductFeed"
 import PostFeed from "../components/Feeds/PostFeed"
 
+
 const getTemplate = (contentfulPage) => {
   const { feedType } = contentfulPage
 

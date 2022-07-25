@@ -1,11 +1,9 @@
 import styled from "styled-components"
 
-export const FeaturedProductsStyles = styled.section`
-
+export const DecolliStyles = styled.section`
   &.section-custom { 
   margin-top:0;
-  margin-bottom:0;
-  padding-bottom:var(--sectionMargin);
+  padding-bottom: calc(var(--sectionMargin) / 2 );
   padding-top: calc(var(--sectionMargin) / 2 );
   background: var(--primary);
   border-top:4px solid #fff;
@@ -18,11 +16,6 @@ export const FeaturedProductsStyles = styled.section`
     p {
       color:#fff;
     }
-  }
-
-  .testo_chiusura {
-    margin-top: calc(var(--gap) * 1);
-    color:#fff;
   }
 
   > div {
@@ -41,19 +34,6 @@ export const FeaturedProductsStyles = styled.section`
         padding-left: 0;
         padding-right: 0;
         gap: var(--gap);
-      }
-    }
-  }
-
-  
-
-  @media (hover: hover) {
-    .features__item--prenota:hover {
-      cursor: pointer;
-      color: var(--primary);
-
-      &::after {
-        left: 100%;
       }
     }
   }
@@ -152,10 +132,10 @@ export const FeaturedProductsStyles = styled.section`
   
 `
 
-export const FeaturedProductStyles = styled.aside`
+export const DecolloStyles = styled.aside`
   min-height: 408px;
-  background-color: #000;
-  flex: 0 0 90%;
+  background-color: white;
+  flex: 0 0 80%;
   overflow: hidden;
   scroll-snap-align: center;
   scroll-margin-left: 25px;
@@ -164,25 +144,52 @@ export const FeaturedProductStyles = styled.aside`
   border: 4px solid rgba(255, 255, 255, 1);
   transition: border-color 0.6s ease, box-shadow 0.6s ease;
   box-shadow: var(--boxShadowLight);
+  margin-bottom: 1.5rem;
 
   @media (min-width: 414px) {
-    min-height: 534px;
-    margin: auto;
+    min-height: 434px;
   }
 
   @media (min-width: 768px) {
-    min-height: 500px;
-    flex-basis: calc(50% - 30px);
-    margin-left: 0;
+    
+    flex-basis: 100%;
+    display:flex;
   }
 
   @media (min-width: 1024px) {
-    min-height: 600px;
+    min-height: 0px;
+  
   }
 
   @media (min-width: 1200px) {
-    flex-basis: calc(33.333% - 30px);
-    flex-shrink: 1;
+    /* flex-basis: 33.333%;
+    flex-shrink: 1; */
+  }
+  
+  .label-decollo {
+    font-weight:700;
+    border-bottom:1px solid;
+    margin-top:20px;
+    font-size:var(--h6);
+  }
+
+  .label-decollo, .info-decollo ,.titolo-decollo, .desc-decollo{
+    color: var(--primary);
+  }
+
+  
+
+  .info-decollo {
+    display:flex;
+    align-items:center;
+
+    .ico-decollo {
+      margin-right:5px
+    }
+
+    a {
+      color:var(--primary);
+    }
   }
 
   .features__item--img {
@@ -195,43 +202,44 @@ export const FeaturedProductStyles = styled.aside`
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  .features__item--content {
+  .decolli__item--content {
     width: 100%;
-    position: absolute;
+   /*  position: absolute; */
     z-index: 2;
-    padding: 20px 10px;
-    bottom: 0;
+    padding: 20px 5px;
+   /*  bottom: 0;
     left: 0;
-    right: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
+    right: 0; */
+    
 
     @media (min-width: 768px) {
-      padding: 20px;
+      padding: 5px;
     }
 
     @media (min-width: 1024px) {
-      padding: 40px 20px;
+      padding: 20px 10px;
     }
 
     @media (min-width: 1200px) {
-      padding: 50px 30px;
+      padding: 20px 10px;
     }
 
-    h4,
+    
     p {
-      text-shadow: var(--textShadow);
+     /*  text-shadow: var(--textShadow); */
+     margin-bottom: 0rem;
     }
 
     h4 {
-      color: #fff;
+      color: var(--primary);
+    }
+
+    .ico-decollo {
+      color: var(--primary);
     }
 
     p {
-      color: #fff;
+      color:  var(--primary);
     }
 
     .features__item--prenota,
@@ -242,7 +250,7 @@ export const FeaturedProductStyles = styled.aside`
     }
   }
 
-  &:hover {
+  /* &:hover {
     cursor: pointer;
     border-color: var(--primary);
     box-shadow: var(--boxShadow);
@@ -251,5 +259,5 @@ export const FeaturedProductStyles = styled.aside`
       transform: scale(1.1);
       opacity: 0.5;
     }
-  }
+  } */
 `

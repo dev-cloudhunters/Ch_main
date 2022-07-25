@@ -8,7 +8,7 @@ const Post = ({ data: { contentfulPost } }) => {
   return (
     <>
       <Seo title={contentfulPost.title} />
-      <Layout>
+      <Layout styleNav="simple">
         <PostTemplate {...contentfulPost} />
       </Layout>
     </>

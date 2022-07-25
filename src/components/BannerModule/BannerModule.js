@@ -55,7 +55,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire,className }) =
             {subTitle && <h2>{subTitle}</h2>}
             {price && (
               <h2 className="price">
-                £{price}
+                €{price}
                 <span style={{ color: "var(--primary)" }}>.</span>
               </h2>
             )}
@@ -65,7 +65,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire,className }) =
                   className="btn"
                   text="Prenota ora il tuo volo"
                   as={Link}
-                  to="/contact"
+                  to="#"
                 />
               )}
               {/* <Button onClick={scrollToArea} text="Lascia che i tuoi sogni sfidino la gravità" /> */}

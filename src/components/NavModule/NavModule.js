@@ -23,9 +23,9 @@ import {
   subMenuNavVariants,
 } from "./NavAnim"
 
-const NavModule = () => {
+const NavModule = (styleNav) => {
   const featuredProduct = useFeaturedProduct()
-
+  //console.log("styleNav",styleNav)
   //const [{isOpen, isBackground},setState] = useContext(MenuContext)
   const { state: { isOpen, isBackground }, dispatch } = useContext(MenuContext);
   const [subNavIsOpen, setSubNav] = useState(false)
@@ -94,7 +94,8 @@ const NavModule = () => {
   //navbar scroll changeBackground function
   const changeBackground = () => {
     //console.log(window.scrollY)
-    if (window.scrollY >= (window.innerHeight-100)) {
+    console.log("styleNav.styleNav",styleNav.styleNav)
+    if (window.scrollY >= (window.innerHeight-100) || styleNav.styleNav == "simple" ) {  
         dispatch({ isBackground: true});
     } else {
         dispatch({ isBackground: false});
@@ -122,13 +123,13 @@ const NavModule = () => {
   }, [isBackground]);
 
 
-
+  console.log("isBackground prima di render",isBackground)
   return (
     <NavModuleStyles>
       
       <motion.div
-        initial={isBackground ? "background_hidden" : "background_visible"}
-        animate={isBackground ? "background_visible" : "background_hidden"}
+        initial={isBackground  ? "background_hidden" : "background_visible"}
+        animate={isBackground   ? "background_visible" : "background_hidden"}
         variants={variantsBackground}
         className="nav"
       >
@@ -159,8 +160,8 @@ const NavModule = () => {
             <Link to="/">
             <motion.span
                   className="logo-wrapper"
-                  initial={!isBackground ? "text_hidden" : "text_visible"}
-                  animate={!isBackground ? "text_visible" : "text_hidden"}
+                  initial={!isBackground    ? "text_hidden" : "text_visible"}
+                  animate={!isBackground    ? "text_visible" : "text_hidden"}
                   variants={variantsLogoText}
                 >
                   <div className="logo_text">CloudHunters</div>
@@ -170,11 +171,11 @@ const NavModule = () => {
                   className="img"
 
                   animate={{
-                    opacity: isBackground ? 1 : 0,
+                    opacity: isBackground     ? 1 : 0,
                     transition: { ease: "easeOut", duration: 0.3, delay:isBackground? 0.8: 0 },
-                    display: isBackground ? "flex" : "none",
+                    display: isBackground    ? "flex" : "none",
                     transitionEnd: {
-                      display: isBackground ? "flex" : "none",
+                      display: isBackground     ? "flex" : "none",
                     },
                   }}
                 >
@@ -224,7 +225,7 @@ const NavModule = () => {
                 onClick={toggleSubNav}
                 onKeyDown={toggleSubNav}
               >
-                Products<span>.</span>
+                Voli<span>.</span>
                 <Chevron />
               </button>
 
@@ -239,7 +240,7 @@ const NavModule = () => {
                     onKeyDown={toggleNav}
                     to="/products"
                   >
-                    All Products<span>.</span>
+                    Tutti i voli<span>.</span>
                   </Link>
                 </li>
                 <hr />

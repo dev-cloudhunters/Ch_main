@@ -93,7 +93,7 @@ export const PostItemStyles = styled(Link)`
   &:hover {
     color: #333;
     border-color: var(--primary);
-    background-color: #151515;
+    /* background-color: #151515; */
     box-shadow: var(--boxShadow);
   }
 `

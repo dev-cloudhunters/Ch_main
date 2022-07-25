@@ -85,9 +85,10 @@ const FeaturedProduct = ({ feature }) => {
             {title && <h4>{title}</h4>}
             {introduction && <p>{introduction}</p>}
             <Button text="Scopri di più" className="features__item--readmore" as="span" arrow={true} />
-            <form action="http://example.com/" method="get">
+            {/* <form action="http://example.com/" method="get">
               <button data-productid={title} onClick={handleChangeProduct} className="features__item--prenota" >Prenota ora <BsBookmarkCheck /></button>
-            </form>
+            </form> */}
+            <button data-productid={title} onClick={handleChangeProduct} className="features__item--prenota" >Prenota ora <BsBookmarkCheck /></button>
           </div>
         )}
       </Link>
