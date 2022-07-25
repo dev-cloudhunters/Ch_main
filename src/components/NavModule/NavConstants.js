@@ -8,6 +8,10 @@ export const menuItems = [
     text: "chi siamo",
   },
   {
+    path: "/decolli",
+    text: "dove decolliamo",
+  },
+  {
     path: "/news",
     text: "news",
   },

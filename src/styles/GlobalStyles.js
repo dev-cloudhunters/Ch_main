@@ -574,5 +574,48 @@ blockquote {
   background-color: var(--primary);
   transition: left 0.3s ease;
 }
+
+video.videoPlayer {
+  max-width: 100%;
+}
+
+.link-loud {
+  justify-content:space-between;
+  border-bottom: 3px solid;
+  border-top: 3px solid;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-color: #c30f1a;
+ 
+  
+  
+  .link-loud-inner {
+    /* border: 1px solid; */
+    padding: 10px;
+    background: #c30f1a;
+
+    &:hover {
+      background: white;
+      box-shadow: var(--boxShadow);
+      .ico-link,a {
+        color: var(--primary);
+      }
+    }
+
+    .ico-link {
+      font-size:var(--h2);
+      
+      color: white;
+      display:flex;
+      margin-left:10px;
+    }
+    
+    a {
+      font-size:var(--h2);
+      text-decoration:none;
+      color: white
+    }
+  }
+}
 .
 `

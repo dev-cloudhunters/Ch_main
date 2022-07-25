@@ -10,6 +10,8 @@ import { Box } from "grommet"
 import { Alarm, Location, Package, Checkmark } from "grommet-icons"
 import Button from "../components/Button/Button"
 import { Link } from "gatsby"
+import PerksModule from "../components/PerksModule/PerksModule"
+import Perk from "../components/PerksModule/Perk"
 
 const ProductTemplateStyles = styled.div`
   margin-top: var(--sectionMargin_small);
@@ -161,7 +163,7 @@ const Producttemplate = (contentfulProduct) => {
   } = contentfulProduct
   console.log("cosaComprende", cosaComprende)
   const productHeaderImage = getImage(headerImage)
-  
+
   return (
     <>
       <Seo title={title} />
@@ -173,7 +175,7 @@ const Producttemplate = (contentfulProduct) => {
       >
         <GatsbyImage
           className="banner__image"
-          
+
           image={productHeaderImage}
           alt={title}
         />
@@ -247,6 +249,19 @@ const Producttemplate = (contentfulProduct) => {
           </div>
         </ProductGallery>
       )}
+      <PerksModule>
+        <Perk title="The Title" content="The content" />
+      </PerksModule>
+      <section custom-section>
+        <Box className="banner__btns" direction="row" align="center" justify="center">
+          <Button
+            className="btn_prenota"
+            text="Prenota ora il tuo volo"
+            as={Link}
+            to="#"
+          />
+        </Box>
+      </section>
       <Features
         title="Gli altri voli"
         introduction="Lascia che i tuoi sogni sfidino la gravità"

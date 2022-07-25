@@ -8,6 +8,10 @@ export const menuItems = [
     text: "voli",
   },
   {
+    path: "/decolli",
+    text: "decolli",
+  },
+  {
     path: "/news",
     text: "news",
   },

@@ -10,7 +10,7 @@ const LatestPosts = ({ title, introduction }) => {
   return (
     <div className="section">
       <div className="container container__tight">
-        {title || introduction ? (
+        {/* {title || introduction ? (
           <div className="intro__area">
             {title && (
               <h2>
@@ -20,7 +20,7 @@ const LatestPosts = ({ title, introduction }) => {
             )}
             {introduction && <p>{introduction}</p>}
           </div>
-        ) : null}
+        ) : null} */}
 
         <PostItems>
           {latestBlogPost.map((node, index) => {
