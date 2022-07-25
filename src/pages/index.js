@@ -1,5 +1,5 @@
 //import * as React from "react"
-import React, { Suspense, useRef, useEffect, useState, useContext } from 'react';
+import React, {  useRef, useEffect, useState, useContext } from 'react';
 //import ProductContext from '../components/ProductContext';
 
 import Layout from "../components/Layout"
@@ -33,9 +33,9 @@ const Index = () => {
   const [state, actions] = useMainStore();
 
   const InnerModal = loadable(() => import('../components/Modal/InnerModal'))
- // const Iframe = loadable(() => import('../components/Iframe/Iframe'))
+  const Iframe = loadable(() => import('../components/Iframe/Iframe'))
   //const Iframe = React.lazy(() => import('../components/Iframe/Iframe'));
-  const Iframe = lazy(() => import('../components/Iframe/Ifra'))
+ // const Iframe = lazy(() => import('../components/Iframe/Ifra'))
 
   //const allEvent = useAllEvent()
   //const allEvent = null 
@@ -163,9 +163,7 @@ const Index = () => {
         />
         <div className="section section_no_top_no_bottom">
           <div className="holder-iframe-testimonials">
-            <Suspense fallback={<div>Loading...</div>}>
               <Iframe />
-            </Suspense>
             <Testimonials />
           </div>
 
