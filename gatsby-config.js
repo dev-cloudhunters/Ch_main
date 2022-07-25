@@ -80,8 +80,8 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     {
-      //resolve: require.resolve(`./gatsby-plugin-snipcart-advanced-custom`),
-      resolve: `gatsby-plugin-snipcart-advanced`,
+      resolve: require.resolve(`./gatsby-plugin-snipcart-advanced-custom`),
+      //resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
         version: "3.4.0",
         publicApiKey: "#####", // use public api key here or in environment variable

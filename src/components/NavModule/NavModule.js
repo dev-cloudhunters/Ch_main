@@ -94,7 +94,7 @@ const NavModule = (styleNav) => {
   //navbar scroll changeBackground function
   const changeBackground = () => {
     //console.log(window.scrollY)
-    console.log("styleNav.styleNav",styleNav.styleNav)
+   // console.log("styleNav.styleNav",styleNav.styleNav)
     if (window.scrollY >= (window.innerHeight-100) || styleNav.styleNav == "simple" ) {  
         dispatch({ isBackground: true});
     } else {
@@ -103,14 +103,14 @@ const NavModule = (styleNav) => {
     }
   }
   useEffect(() => {
-    console.log("addEvent changeBackground")
+   // console.log("addEvent changeBackground")
     changeBackground()
     // adding the event when scroll change background
     window.addEventListener("scroll", changeBackground)
   }, [])
 
   useEffect(() => {
-    console.log("isOpen", isOpen)
+   // console.log("isOpen", isOpen)
     if(!isOpen){
       if (window.scrollY >= window.innerHeight) {
         dispatch({ isBackground: true});
@@ -119,11 +119,11 @@ const NavModule = (styleNav) => {
   }, [isOpen]);
 
   useEffect(() => {
-    console.log("isBackground", isBackground)
+   // console.log("isBackground", isBackground)
   }, [isBackground]);
 
 
-  console.log("isBackground prima di render",isBackground)
+  //console.log("isBackground prima di render",isBackground)
   return (
     <NavModuleStyles>
       
@@ -238,7 +238,7 @@ const NavModule = (styleNav) => {
                   <Link
                     onClick={toggleNav}
                     onKeyDown={toggleNav}
-                    to="/products"
+                    to="/voli"
                   >
                     Tutti i voli<span>.</span>
                   </Link>

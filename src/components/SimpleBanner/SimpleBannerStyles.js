@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const SimpleBannerStyles = styled.section`
-  height: 70vh;
+  height: 85vh;
   position: relative;
   padding: var(--gap) var(--borderSpacing);
 

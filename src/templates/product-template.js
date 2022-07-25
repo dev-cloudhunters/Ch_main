@@ -48,6 +48,21 @@ const ProductTemplateStyles = styled.div`
     }
   }
 
+  .info-volo-box {
+    @media (max-width: 768px) {
+      flex-direction:column;
+
+      .info-volo-box-item {
+        max-width: 100%;
+        margin-bottom:20px;
+
+        .durata-volo {
+          text-align:left;
+        }
+      }
+    }
+  }
+
   .label-info-volo {
     color: var(--primary);
     font-weight: 700;
@@ -58,9 +73,6 @@ const ProductTemplateStyles = styled.div`
     margin-right:5px;
   }
 
-
-
-  
 
   .cosa-comprende-item {
    /*  background: var(--lightGray);
@@ -73,7 +85,7 @@ const ProductTemplateStyles = styled.div`
   }
 
   .cosa-comprende-box{
-    max-width:40%
+    max-width:60%
   }
 
   .durata-volo {
@@ -149,6 +161,7 @@ const Producttemplate = (contentfulProduct) => {
   } = contentfulProduct
   console.log("cosaComprende", cosaComprende)
   const productHeaderImage = getImage(headerImage)
+  
   return (
     <>
       <Seo title={title} />
@@ -160,6 +173,7 @@ const Producttemplate = (contentfulProduct) => {
       >
         <GatsbyImage
           className="banner__image"
+          
           image={productHeaderImage}
           alt={title}
         />
@@ -168,9 +182,9 @@ const Producttemplate = (contentfulProduct) => {
         <div className="container container__tight">
 
 
-          <Box direction="row" fill="horizontal" gap="medium"  >
+          <Box className="info-volo-box" direction="row" fill="horizontal" gap="medium"  >
             {cosaComprende &&
-              <BoxCustom className="cosa-comprende-box" direction="column" >
+              <BoxCustom className="info-volo-box-item cosa-comprende-box" direction="column" >
                 <Box direction="row" align="center" >
                   <Package className="ico-info-volo" color='var(--primary)' />
                   <div className="label-info-volo">Cosa Comprende:</div>
@@ -184,7 +198,7 @@ const Producttemplate = (contentfulProduct) => {
             }
 
             {durataDelVolo &&
-              <BoxCustom>
+              <BoxCustom className="info-volo-box-item">
                 <Box direction="row" align="center">
                   <Alarm className="ico-info-volo" color='var(--primary)' />
                   <div className="label-info-volo">Durata del volo:</div>
@@ -195,7 +209,7 @@ const Producttemplate = (contentfulProduct) => {
             }
 
             {decollo &&
-              <BoxCustom>
+              <BoxCustom className="info-volo-box-item">
                 <Box direction="row" align="center">
                   <Location className="ico-info-volo" color='var(--primary)' />
                   <div className="label-info-volo">Partenza:</div>

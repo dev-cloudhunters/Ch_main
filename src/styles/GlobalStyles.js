@@ -522,6 +522,7 @@ blockquote {
   background: var(--primary);
   margin-bottom: 10px;
   padding: 5px 10px;
+  font-size:var(--h2);
   color: white;
   -webkit-transition: background 0.5s ease 0.2s,color 0.3s ease 0.3s;
   transition: background 0.5s ease 0.2s,color 0.3s ease 0.3s;

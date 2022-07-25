@@ -12,7 +12,7 @@ export const menuItems = [
     text: "news",
   },
   {
-    path: "/contact",
-    text: "contact",
+    path: "/contatti",
+    text: "contatti",
   },
 ]
