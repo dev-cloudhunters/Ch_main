@@ -17,12 +17,14 @@ export const FeaturedProductsStyles = styled.section`
 
     p {
       color:#fff;
+      font-size: var(--h6)
     }
   }
 
   .testo_chiusura {
     margin-top: calc(var(--gap) * 1);
     color:#fff;
+    font-size: var(--h6)
   }
 
   > div {

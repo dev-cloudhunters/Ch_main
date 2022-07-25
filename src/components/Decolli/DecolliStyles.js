@@ -9,6 +9,10 @@ export const DecolliStyles = styled.section`
   border-top:4px solid #fff;
   }
 
+  .testo-collapse {
+    font-size: var(--h5)
+  }
+
   .intro__area {
     color:#fff;
     margin-bottom: calc(var(--gap) * 1);
@@ -213,7 +217,7 @@ export const DecolloStyles = styled.aside`
     
 
     @media (min-width: 768px) {
-      padding: 5px;
+      padding: 10px;
     }
 
     @media (min-width: 1024px) {

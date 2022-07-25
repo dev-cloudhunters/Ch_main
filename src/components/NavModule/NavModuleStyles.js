@@ -34,6 +34,7 @@ export const NavModuleStyles = styled.nav`
     img {
       max-height: 70px;
       width: auto;
+      margin-right:4px;
     }
   }
 

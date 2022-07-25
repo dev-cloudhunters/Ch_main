@@ -32,9 +32,7 @@ const Collapse = (props) => {
     `;
 
     return (
-        <div>
-
-
+        <div className={props.className}>
             {isSmall > 0 && (
                 <>
                     <ButtonStyled onClick={() => setOpen(!open)} label={props.label} />
@@ -45,7 +43,7 @@ const Collapse = (props) => {
                             justify="center"
                             pad="medium"
                         >
-                            <Text>{props.contentCollapse}</Text>
+                            <Text className="testo-collapse">{props.contentCollapse}</Text>
                         </BoxDesc>
                     </CollapsibleDesc>
                 </>
@@ -54,7 +52,7 @@ const Collapse = (props) => {
             {!isSmall > 0 && (
                 <>
                    
-                            <Text>{props.contentCollapse}</Text>
+                            <Text className="testo-collapse">{props.contentCollapse}</Text>
                       
                 </>
             )}

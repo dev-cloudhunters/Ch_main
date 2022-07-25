@@ -181,7 +181,7 @@ const NavModule = (styleNav) => {
                 >
               <StaticImage
                 className="logoImage"
-                src="../../../static/logos/logo-small.png"
+                src="../../../static/logos/logo_cloudhunters.png"
                 alt="Perk Image"
                 layout="constrained"
                 placeholder="blurred"

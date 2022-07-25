@@ -138,7 +138,7 @@ const Index = () => {
       <Seo title="Home" />
       <Layout>
         <BannerModule
-          title="PARAPENDIO BIPOSTO"
+          title="CLOUDHUNTERS PARAPENDIO ROMA"
           subTitle="VIENI A VOLARE CON NOI"
           enquire={true}
         />

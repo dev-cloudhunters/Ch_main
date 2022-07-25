@@ -446,7 +446,7 @@ blockquote {
     margin-bottom: 0;
     text-shadow: var(--textShadow);
     color: #fff;
-    line-height: 0.75em;
+    line-height: 0.85em;
   }
 }
 
