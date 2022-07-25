@@ -79,7 +79,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
-    /*
+  
     {
       resolve: require.resolve(`./gatsby-plugin-snipcart-advanced-custom`),
       //resolve: `gatsby-plugin-snipcart-advanced`,
@@ -129,6 +129,6 @@ module.exports = {
         
       },
     },
-    */
+  
   ],
 }

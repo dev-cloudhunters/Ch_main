@@ -168,10 +168,10 @@ const Index = () => {
           </div>
 
         </div>
-        <Decolli
+       {/*  <Decolli
           title="Dove decolliamo"
           introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
-        />
+        /> */}
         {/* </ProductContext.Provider> */}
 
         <BasicTextModule
