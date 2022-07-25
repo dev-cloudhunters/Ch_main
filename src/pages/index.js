@@ -33,9 +33,9 @@ const Index = () => {
   const [state, actions] = useMainStore();
 
   const InnerModal = loadable(() => import('../components/Modal/InnerModal'))
-  //const Iframe = loadable(() => import('../components/Iframe/Iframe'))
-  const Iframe = React.lazy(() => import('../components/Iframe/Iframe'));
-
+ // const Iframe = loadable(() => import('../components/Iframe/Iframe'))
+  //const Iframe = React.lazy(() => import('../components/Iframe/Iframe'));
+  const Iframe = lazy(() => import('../components/Iframe/Ifra'))
 
   //const allEvent = useAllEvent()
   //const allEvent = null 
