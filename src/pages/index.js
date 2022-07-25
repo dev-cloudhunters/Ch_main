@@ -33,6 +33,7 @@ const Index = () => {
   const [state, actions] = useMainStore();
 
   const InnerModal = loadable(() => import('../components/Modal/InnerModal'))
+  const Iframe = loadable(() => import('../components/Iframe/Iframe'))
 
   //const allEvent = useAllEvent()
   //const allEvent = null 
@@ -160,9 +161,7 @@ const Index = () => {
         />
         <div className="section section_no_top_no_bottom">
           <div className="holder-iframe-testimonials">
-            <div className="responsive-iframe">
-              <iframe src="https://player.vimeo.com/video/283203062?h=d63deecc71&title=0&byline=0&portrait=0" width="640" height="360" frameBorder='0' ></iframe>
-            </div> 
+            <Iframe/>
             <Testimonials />
           </div>
 
