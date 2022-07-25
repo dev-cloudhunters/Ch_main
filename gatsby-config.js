@@ -80,7 +80,8 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-snipcart-advanced`,
+      resolve: require.resolve(`./gatsby-plugin-snipcart-advanced-custom`),
+      //resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
         version: "3.4.0",
         publicApiKey: "#####", // use public api key here or in environment variable
@@ -88,6 +89,8 @@ module.exports = {
         currency: "eur",
         openCartOnAdd: true,
         useSideCart: false,
+        loadStrategy: "on-user-interaction",
+
         // be careful with this mode cart. The cart in this mode has a bug of scroll in firefox
         locales: {
           it: {

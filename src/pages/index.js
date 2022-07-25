@@ -1,6 +1,6 @@
 //import * as React from "react"
 import React, { useRef, useEffect, useState, useContext } from 'react';
-import ProductContext from '../components/ProductContext';
+//import ProductContext from '../components/ProductContext';
 
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
@@ -12,11 +12,11 @@ import Features from "../components/Features/Features"
 import Decolli from "../components/Decolli/Decolli"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
-import CheckAvalaible from "../components/CheckAvalaible/CheckAvalaible"
+//import CheckAvalaible from "../components/CheckAvalaible/CheckAvalaible"
 //import InnerModal from "../components/Modal/InnerModal"
 //import Modal from '../components/Modal/Modal.js';
 import Modal from 'react-modal';
-import { ModalStyles } from "../components/Modal/ModalStyles"
+//import { ModalStyles } from "../components/Modal/ModalStyles"
 
 //import useAllEvent from "../hooks/use-all-event"
 import useFeaturedProduct from "../hooks/use-featured-product"
@@ -24,7 +24,7 @@ import useIlVolo from "../hooks/use-il_volo"
 
 import { useMainStore } from '../components/MainStore';
 import loadable from '@loadable/component'
-import { Box, Card, CardBody, CardFooter, CardHeader } from 'grommet';
+//import { Box, Card, CardBody, CardFooter, CardHeader } from 'grommet';
 
 //import Modal from 'react-modal';
 
