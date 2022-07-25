@@ -163,7 +163,7 @@ const Index = () => {
         />
         <div className="section section_no_top_no_bottom">
           <div className="holder-iframe-testimonials">
-              <Iframe />
+             {/*  <Iframe /> */}
             <Testimonials />
           </div>
 
