@@ -577,6 +577,7 @@ blockquote {
 
 video.videoPlayer {
   max-width: 100%;
+  border: 3px solid var(--primary);
 }
 
 .link-loud {

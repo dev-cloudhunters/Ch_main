@@ -13,6 +13,7 @@ import Decolli from "../components/Decolli/Decolli"
 import LatestPosts from "../components/Post/LatestPosts"
 import Testimonials from "../components/Testimonials/Testimonials"
 import cloudhunters from "../../static/cloudhunters.mp4"
+import posterVideo from "../../static/logos/logo_cloudhunters.png" 
 import Button from "../components/Button/Button"
 import { Link } from "gatsby"
 import { BiPaperPlane } from "react-icons/bi"
@@ -90,7 +91,7 @@ const Index = () => {
   }, [])  */
 
 
-
+console.log("posterVideo",posterVideo)
 
   function openModal() {
     //setIsOpen(true);
@@ -170,7 +171,7 @@ const Index = () => {
         <div className="section">
           <div className="holder-iframe-testimonials">
             <div>
-              <video className="videoPlayer" controls>
+              <video  style={{ width: `100%` }} className="videoPlayer" poster={posterVideo} controls>
                 <source src={cloudhunters} type="video/mp4" />
               </video>
             </div>
